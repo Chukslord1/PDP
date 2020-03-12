@@ -80,7 +80,14 @@
 
 
 //--------- Start Banner Area -------------//
-
+.banner-blog-area {
+	background:url(../img/news.jpg) center;
+	background-size:cover;
+	.fullscreen {
+		@include media-breakpoint-down (sm) {
+			height: 700px !important;
+		}
+	}
 .banner-area {
 	background:url(../img/banner-bg.jpg) center;
 	background-size:cover;
@@ -124,7 +131,7 @@
 
 		@include media-breakpoint-down (lg) {
 				font-size:45px;
-		}	
+		}
 
 		@media ( max-width:414px ) {
 			font-size:40px;
@@ -168,7 +175,7 @@
 	background-color:$offwhite;
 	padding:40px 30px;
 
-	
+
 	.countdown-left{
 		h1{
 			font-size:32px;
@@ -184,7 +191,7 @@
 
 	.countdown-right{
 		.right-wrap{
-			background-color:$primary-color;	
+			background-color:$primary-color;
 		}
 
 		text-align:center;
@@ -193,14 +200,14 @@
 			padding-bottom:20px;
 			color:$white;
 			span{
-				font-size:36px;			
+				font-size:36px;
 			}
 			@media(max-width:414px){
 				font-size:10px;
 				span{
 					font-size:20px;
 				}
-			}			
+			}
 		}
 	}
 }
@@ -233,7 +240,7 @@
 		.thumb img{
 			transform:scale(1.1) rotate(-2deg);
 		}
-		
+
 	}
 	@media(max-width:960px){
 		text-align:center;
@@ -276,7 +283,7 @@
 
 	.home-about-right{
 		max-width:580px;
-		padding-left:80px; 
+		padding-left:80px;
 		@media(max-width:1024px){
 			padding-left:15px;
 		}
@@ -300,7 +307,7 @@
 //--------- Start gallery Area -------------//
 
 .single-gallery{
-	margin-bottom:30px;	
+	margin-bottom:30px;
 	width:100%;
 	@include transition();
 	&:hover{
@@ -365,7 +372,7 @@
 	h5{
 		margin-top:-90px;
 		font-size:24px;
-		color:$white;	
+		color:$white;
 	}
 	p{
 		font-size:18px;
@@ -391,7 +398,7 @@
 		.mn-accordion .accordion-item .accordion-heading {
 		  position: relative;
 		  cursor: pointer;
-		  padding: 12px 25px;  
+		  padding: 12px 25px;
 		  background-color: #f9f9ff;
 		}
 
@@ -399,7 +406,7 @@
 		  position: relative;
 		  background-color:transparent;
 		  cursor: pointer;
-		  padding: 15px 25px;  
+		  padding: 15px 25px;
 		  border:1px solid #eee!important;
 		}
 
@@ -410,7 +417,7 @@
 		  	}
 		  .icon i{
 		  		color:$primary-color!important;
-		  }	  	
+		  }
 		}
 
 
@@ -421,7 +428,7 @@
 		  }
 		  .icon i{
 		  	color:$white!important;
-			
+
 		  }
 
 		}
@@ -441,8 +448,8 @@
 		  transition: all 0.2s ease;
 		  display: inline-block;
 			font-size: 15px;
-			font-weight: 900;	
-			color:#000;  
+			font-weight: 900;
+			color:#000;
 		}
 
 		.mn-accordion .accordion-item .accordion-heading .icon i {
@@ -522,7 +529,7 @@
 	padding:40px 0;
 	.owl-carousel .owl-item img{
 		width:auto!important;
-	}	
+	}
 	.single-brand{
 		@include filter(grayscale, 100%);
 		opacity:.5;
@@ -701,7 +708,7 @@
 				}
 			}
 		}
-		
+
 		i{
 			color:#cccccc;
 			@include transition();
@@ -735,7 +742,7 @@
 			cursor:pointer;
 		}
 
-			
+
 		@media(max-width:960px) {
 			.nw-btn{
 				margin-top:20px;
@@ -797,7 +804,7 @@
 		}
 	}
 
-		
+
 	.footer-bottom{
 		padding-top:80px;
 	}
@@ -852,7 +859,7 @@
 
 .generic-content{
 	h1{
-		font-weight:600;	
+		font-weight:600;
 	}
 }
 
