@@ -42,53 +42,33 @@
       </a>
      </div>
      <nav id="nav-menu-container">
-      <ul class="nav-menu">
-       <li class="menu-active">
-        <a href="index.html">
-         Home
-        </a>
-       </li>
-       <li>
-        <a href="about.html">
-         About
-        </a>
-       </li>
-       <li>
-        <a href="services.html">
-         Service
-        </a>
-       </li>
-       <li>
-        <a href="team.html">
-         Team
-        </a>
-       </li>
-       <li class="menu-has-children">
-        <a href="">
-         Blog
-        </a>
-        <ul>
-         <li>
-          <a href="blog-home.html">
-           Blog Home
-          </a>
-         </li>
-         <li>
-          <a href="blog-single.html">
-           Blog Single
-          </a>
-         </li>
-        </ul>
-       </li>
-       <li>
-        <a href="elements.html">
-         Elements
-        </a>
-       </li>
-       <li>
-        <a href="contact.html">
-         Contact
-        </a>
+       <ul class="nav-menu">
+        <li class="menu-active">
+         <a href="index.html">
+          Home
+         </a>
+        </li>
+        <li>
+         <a href="services.html">
+          Service
+         </a>
+        </li>
+        <li>
+         <a href="blog-home.html">
+          Latest News
+         </a>
+        </li>
+        <li>
+         <a href="team.html">
+          Team
+         </a>
+        </li>
+        <li>
+         <a href="contact.html">
+          Contact
+         </a>
+        </li>
+       </ul>
        </li>
       </ul>
      </nav>
@@ -111,9 +91,6 @@
       <p class="text-white">
        There is a moment in the life of any aspiring astronomer that it is time to buy that first
       </p>
-      <a class="primary-btn" href="#">
-       View More
-      </a>
      </div>
     </div>
    </div>
@@ -153,7 +130,7 @@
 
        </div>
       </div>
-    
+
      </div>
      <div class="col-lg-4 sidebar-widgets">
       <div class="widget-wrap">
@@ -163,41 +140,26 @@
          Popular Posts
         </h4>
         <div class="popular-post-list">
-         <div class="single-post-list d-flex flex-row align-items-center">
-          <div class="thumb">
-           <img alt="" class="img-fluid" src="{% static 'img/blog/pp1.jpg' %}"/>
-          </div>
-          <div class="details">
-           <a href="blog-single.html">
-            <h6>
-             Space The Final Frontier
-            </h6>
-           </a>
-           <p>
-            02 Hours ago
-           </p>
-          </div>
-         </div>
-         <div class="single-sidebar-widget popular-post-widget">
-          <h4 class="popular-title">
-           Popular Posts
-          </h4>
-          <div class="popular-post-list">
+
            <div class="single-post-list d-flex flex-row align-items-center">
+            {% for Post in object_list %}
             <div class="thumb">
              <img alt="" class="img-fluid" src="{% static 'img/blog/pp1.jpg' %}"/>
             </div>
             <div class="details">
              <a href="blog-single.html">
               <h6>
-               Space The Final Frontier
+
               </h6>
              </a>
              <p>
-              02 Hours ago
+               {{Post.created_at}}
              </p>
             </div>
+
            </div>
+             {% endfor %}
+
      </div>
   </section>
   <!-- End post-content Area -->
