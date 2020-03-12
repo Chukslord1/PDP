@@ -137,20 +137,20 @@
 
         </div>
        </div>
-       {% for i in blog %}
+       {% for Post in object_list %}
        <div class="col-lg-9 col-md-9">
         <div class="feature-img">
          <img alt="" class="img-fluid" src="{{i.img}}"/>
         </div>
         <a class="posts-title" href="blog-single.html">
          <h3>
-          {{i.title}}
+          {{Post.title}}
          </h3>
         </a>
         <p class="excert">
-         {{i.body}}
+         {{Post.body}}
         </p>
-        <a class="primary-btn" href="#">
+        <a class="primary-btn" href="{{Post.get_absolute_url}}">
          View More
         </a>
        </div>
